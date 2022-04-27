@@ -1,0 +1,32 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+.logo > img{
+    width: 100px;
+}
+.logo > h1{
+    margin-left: 30px;
+}
+.fecha{
+    margin: 15px;
+}
+.menu > a{
+	color: black;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 3px;
+    margin-right: 10px;
+    border-right: 1px solid #000;
+    padding: 5px 10px;
+}
+.menu a:hover {
+  background-color: #B1AFAF;
+  border-right: 6px solid #000;
+}
