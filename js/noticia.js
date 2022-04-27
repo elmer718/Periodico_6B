@@ -8,7 +8,7 @@ fetch(urlNoticias)
 
 //traemos el JSON de nuestro localStorade
 var noticias = JSON.parse(localStorage.getItem("listNoticia"));
-var myDiv = document.getElementById("noti");
+var myDivN = document.getElementById("noti");
 //listamos las 3 primeras noticias
 for(var i = 0; i < 3; i++){
 	const myTitulo = document.createElement('a');
@@ -20,12 +20,12 @@ for(var i = 0; i < 3; i++){
 	myVer.textContent = "Ver Mas";
 
 	myParrafo.appendChild(myVer);
-	myDiv.appendChild(myTitulo);
-	myDiv.appendChild(myParrafo);
+	myDivN.appendChild(myTitulo);
+	myDivN.appendChild(myParrafo);
 }
 //listamos todas las noticias
 function listarTodo(){
-	myDiv.textContent = "";
+	myDivN.textContent = "";
 	for (let i of noticias) {
 		const myTitulo = document.createElement('a');
 		const myParrafo = document.createElement('p');
@@ -36,9 +36,8 @@ function listarTodo(){
 		myVer.textContent = "Ver Mas";
 
 		myParrafo.appendChild(myVer);
-		myDiv.appendChild(myTitulo);
-		myDiv.appendChild(myParrafo);
+		myDivN.appendChild(myTitulo);
+		myDivN.appendChild(myParrafo);
 	}
 
 }
-
