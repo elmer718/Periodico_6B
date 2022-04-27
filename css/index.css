@@ -8,6 +8,7 @@
 }
 .noticia > p > a{
     color: black;
+    text-decoration: underline;
     cursor: pointer;
     margin-left: 3px;
 }

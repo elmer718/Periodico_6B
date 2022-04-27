@@ -1,21 +1,44 @@
 
+//listamos todas las noticias
+//conectamos con el endpoints de las noticias
 const urlNoticias = 'https://carlosreneas.github.io/endpoints/noticias.json';
 fetch(urlNoticias)
       .then(response => response.json())
       .then(json => {console.log(json); localStorage.setItem("listNoticia", JSON.stringify(json))});
 
-
-var noticias = localStorage.getItem("listNoticia");
+//traemos el JSON de nuestro localStorade
+var noticias = JSON.parse(localStorage.getItem("listNoticia"));
 var myDiv = document.getElementById("noti");
-for (var i = 0; i < 3 /*noticias.length*/; i++) {
-	const myA = document.createElement('a');
-	const myP = document.createElement('p');
+//listamos las 3 primeras noticias
+for(var i = 0; i < 3; i++){
+	const myTitulo = document.createElement('a');
+	const myParrafo = document.createElement('p');
+	const myVer = document.createElement('a');
 
-	myA.textContent = noticias[i].titulo;
-	myP.textContent = noticias[i].descripcion;
+	myTitulo.textContent = noticias[i].titulo+" - "+noticias[i].categoria+" - "+noticias[i].fecha;
+	myParrafo.textContent = noticias[i].descripcion;
+	myVer.textContent = "Ver Mas";
 
-	myDiv.appendChild(myA);
-	myDiv.appendChild(myP);
+	myParrafo.appendChild(myVer);
+	myDiv.appendChild(myTitulo);
+	myDiv.appendChild(myParrafo);
+}
+//listamos todas las noticias
+function listarTodo(){
+	myDiv.textContent = "";
+	for (let i of noticias) {
+		const myTitulo = document.createElement('a');
+		const myParrafo = document.createElement('p');
+		const myVer = document.createElement('a');
 
+		myTitulo.textContent = i.titulo+" - "+i.categoria+" - "+i.fecha;
+		myParrafo.textContent = i.descripcion;
+		myVer.textContent = "Ver Mas";
+
+		myParrafo.appendChild(myVer);
+		myDiv.appendChild(myTitulo);
+		myDiv.appendChild(myParrafo);
+	}
 
 }
+
