@@ -1,0 +1,13 @@
+.noticia > a{
+    text-decoration: none;
+    color: #3F51B5;
+    cursor: pointer;
+}
+.noticia > p{
+    border: 1px solid #B1AFAF;
+}
+.noticia > p > a{
+    color: black;
+    cursor: pointer;
+    margin-left: 3px;
+}

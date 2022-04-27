@@ -1,0 +1,14 @@
+.contenido a{
+	text-decoration: none;
+    color: #3F51B5;
+    cursor: pointer;
+}
+.contenido > p{
+    border: 1px solid #B1AFAF;
+}
+.contenido > p > a{
+    color: black;
+    cursor: pointer;
+    margin-left: 3px;
+    text-decoration: underline;
+}

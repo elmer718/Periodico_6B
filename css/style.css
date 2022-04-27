@@ -50,19 +50,7 @@
     width: 20%;
     margin: 5px;
 }
-.noticia > a{
-    text-decoration: none;
-    color: #3F51B5;
-    cursor: pointer;
-}
-.noticia > p{
-    border: 1px solid #B1AFAF;
-}
-.noticia > p > a{
-    color: black;
-    cursor: pointer;
-    margin-left: 3px;
-}
+
 .categoria{
     border: 1px solid #B1AFAF;
 }
@@ -125,6 +113,7 @@
     height: 50px;
     background-color: #DDDDDD;
     font-size: 14px;
+    margin: 0px;
 }
 .footer-2 *{
     margin-left: 10px;
