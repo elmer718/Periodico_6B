@@ -21,6 +21,12 @@ for(var i = 0; i < 3; i++){
       
       myTitulo.textContent = tecnologias[i].titulo;
 
+      if(localStorage.getItem("pathname") != window.location.pathname){
+            myTitulo.setAttribute('href', "../html/noticia.html");
+      }else{
+            myTitulo.setAttribute('href', "html/noticia.html");
+      }
+      
       myDiv2.appendChild(myTitulo);
       myDivT.appendChild(myDiv2)
 }

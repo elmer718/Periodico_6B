@@ -27,8 +27,6 @@ for(var i = 0; i < 3; i++){
       }else{
             myTitulo.setAttribute('href', "html/noticia.html");
       }
-      
       myDiv2.appendChild(myTitulo);
-      myDivD.appendChild(myDiv2)
+      myDivD.appendChild(myDiv2);
 }
-
