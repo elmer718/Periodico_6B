@@ -15,11 +15,14 @@ const myDivD = document.createElement('div');
 myH3.textContent = "Deportes";
 myDivD.appendChild(myH3);
 myDiv.appendChild(myDivD);
+
 for(var i = 0; i < 3; i++){
       const myDiv2 = document.createElement('div');
       const myTitulo = document.createElement('a');
       
       myTitulo.textContent = deportes[i].titulo;
+
+      myTitulo.setAttribute('href', "html/noticia.html");
 
       myDiv2.appendChild(myTitulo);
       myDivD.appendChild(myDiv2)
