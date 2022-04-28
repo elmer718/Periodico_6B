@@ -27,7 +27,7 @@ for(var i = 0; i < 3; i++){
 	myVer.textContent = "Ver Mas";
 
 	myVer.setAttribute('href', "html/noticia.html");
-	//myVer.setAttribute('target', "_blank");
+	myVer.setAttribute('onclick', carga());
 	myTitulo.setAttribute('href', "html/noticia.html");
 
 	myParrafo.appendChild(myVer);
@@ -56,3 +56,6 @@ function listarTodo(){
 
 }
 
+function carga(){
+	localStorage['carga'] = "cuerpo";
+}

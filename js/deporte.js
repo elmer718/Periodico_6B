@@ -22,8 +22,13 @@ for(var i = 0; i < 3; i++){
       
       myTitulo.textContent = deportes[i].titulo;
 
-      myTitulo.setAttribute('href', "html/noticia.html");
-
+      if(localStorage.getItem("pathname") != window.location.pathname){
+            myTitulo.setAttribute('href', "../html/noticia.html");
+      }else{
+            myTitulo.setAttribute('href', "html/noticia.html");
+      }
+      
       myDiv2.appendChild(myTitulo);
       myDivD.appendChild(myDiv2)
 }
+

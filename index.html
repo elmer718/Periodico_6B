@@ -97,6 +97,10 @@
                 }
             }
         })(); // Calling anonymous function here only
+        (()=>{
+        	let pathname = window.location.pathname;
+        	localStorage.setItem('pathname', pathname);
+        })();
     </script>
 </body>
 </html>	

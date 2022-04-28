@@ -1,5 +1,7 @@
 
 //conectamos con el endpoints de las noticias
+
+
 const urlNoticia = 'https://carlosreneas.github.io/endpoints/noticia_1.json';
 fetch(urlNoticia)
       .then(response => response.json())
